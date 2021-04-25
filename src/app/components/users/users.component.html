@@ -31,7 +31,7 @@
           <tbody class="bg-white divide-y divide-gray-200">
           <tr *ngFor="let user of users">
             <td class="px-6 py-4  text-sm text-gray-500">
-              <a routerLink="{{ user['id'] }}">{{ user['id'] }}</a>
+              <a routerLink="{{ user['id'] }}">{{ user['id'] }}🖱</a>
             </td>
             <td class="px-6 py-4 text-sm text-gray-500">
               {{ user['firstName']|titlecase }}
@@ -46,8 +46,10 @@
               {{ user['phone'] }}
             </td>
             <td class="pl-4 py-4 text-left text-sm font-medium">
-              <a  routerLink="{{ user['id'] }}/edit" class="text-white hover:text-gray-200 font-semibold bg-yellow-500 p-2 mx-1 rounded cursor-pointer">Update</a>
-              <a (click)="handleDeleteUser($event, user['id'])" class="text-white hover:text-gray-200 font-semibold bg-red-500 p-2 mx-1 rounded cursor-pointer">Delete</a>
+              <a routerLink="{{ user['id'] }}/edit"
+                 class="text-white hover:text-gray-200 font-semibold bg-yellow-500 p-2 mx-1 rounded cursor-pointer">📝 Update</a>
+              <a (click)="handleDeleteUser($event, user['id'])"
+                 class="text-white hover:text-gray-200 font-semibold bg-red-500 p-2 mx-1 rounded cursor-pointer">⚠ Delete</a>
             </td>
           </tr>
           </tbody>
